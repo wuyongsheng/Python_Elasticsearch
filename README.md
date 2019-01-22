@@ -1,15 +1,3 @@
----
-layout: post
-title: Python对Elasticsearch的基本操作
-keywords: 'Elasticsearch, Python'
-categories:
-  - Elasticsearch
-  - 大数据
-  - Python
-tags: Elasticsearch
-date: 2019-01-23 00:01:54
----
-
 
 > 在公司的大数据项目中，经常涉及对elasticsearch的查询操作，也会涉及利用Python对elasticsearch的数据的进行存取，为了系统地学习用Python语言操作elasticsearch，最近查阅了网上的一些资料，发现CSDN上有两篇文章写得很好，这篇笔记主要参考了这两篇文章（文末会附上这两篇文章的链接）
 
@@ -114,7 +102,7 @@ es.update(index='bank', doc_type='typeName',body=b,id='AWh2Mmuoy6XG0WYYFrgL')
 
 ```
 
-### 
+###  查询一条文档
 通过以下代码可以查询一条文档
 ```
 from elasticsearch import Elasticsearch
@@ -126,3 +114,9 @@ print(find)
 ```
 {'_index': 'bank', '_type': 'typeName', '_id': 'AWh2Mmuoy6XG0WYYFrgL', '_version': 1, 'found': True, '_source': {'name': 'lu', 'sex': 'female', 'age': 10}}
 ```
+###  参考文章
+参考了一下文章：
+
+https://blog.csdn.net/wufaliang003/article/details/81368365
+
+https://blog.csdn.net/u011682283/article/details/85265121
